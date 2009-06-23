@@ -40,10 +40,8 @@ module WWW
         @name.to_s.strip unless @name.nil?
       end
       
-      #
       # Returns a string representation of this Bundle.
       # In case name is nil this method will return an empty string.
-      #
       def to_s
         name.to_s
       end
@@ -51,7 +49,6 @@ module WWW
       
       class << self
 
-        # 
         # Creates and returns new instance from a REXML +element+.
         # 
         # Implements Element#from_rexml.

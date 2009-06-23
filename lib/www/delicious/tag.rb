@@ -55,9 +55,7 @@ module WWW
         name.to_s
       end
       
-      
-      public
-      #
+
       # Returns wheter this object is valid for an API request.
       # 
       # To be valid +name+ must not be empty.
@@ -80,7 +78,6 @@ module WWW
       
       class << self
         
-        # 
         # Creates and returns new instance from a REXML +element+.
         # 
         # Implements Element#from_rexml.

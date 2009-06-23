@@ -74,7 +74,6 @@ module WWW
       end
       
       
-      #
       # Returns whether this object is valid for an API request.
       # 
       # To be valid +url+ and +title+ must not be empty.
@@ -96,7 +95,6 @@ module WWW
       
       class << self
         
-        # 
         # Creates and returns new instance from a REXML +element+.
         # 
         # Implements Element#from_rexml.

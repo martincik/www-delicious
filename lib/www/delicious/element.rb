@@ -24,7 +24,6 @@ module WWW
     # 
     class Element
       
-      #
       # Initializes a new instance and populate attributes from +attrs+.
       # 
       #   class User < Element
@@ -58,9 +57,7 @@ module WWW
       
       class << self
         
-        # 
         # Creates and returns new instance from a REXML +element+.
-        # 
         def from_rexml(element, options)
           raise NotImplementedError
         end
