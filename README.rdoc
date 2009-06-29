@@ -21,7 +21,7 @@ to take care of all these low level details, if you don't want:
 WWW::Delicious will try to give you the most with less efforts.
 
 
-== Dependencies
+== Requirements
 
 * Ruby >= 1.8.6 (not tested with previous versions)
 

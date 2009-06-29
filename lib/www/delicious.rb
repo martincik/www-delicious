@@ -79,7 +79,7 @@ module WWW #:nodoc:
     
     NAME            = 'WWW::Delicious'
     GEM             = 'www-delicious'
-    AUTHOR          = 'Simone Carletti <weppos@weppos.net>'
+    AUTHORS         = ['Simone Carletti <weppos@weppos.net>']
     
     # del.icio.us account username
     attr_reader :username
