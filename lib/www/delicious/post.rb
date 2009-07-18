@@ -67,7 +67,7 @@ module WWW
         params[:description]  = title
         params[:extended]     = notes if notes
         params[:shared]       = shared
-        params[:tags]         = tags.join(' ') if tags.respond_to? :join
+        params[:tags]         = tags
         params[:replace]      = replace
         params[:dt]           = WWW::Delicious::TIME_CONVERTER.call(time) if time
         params
