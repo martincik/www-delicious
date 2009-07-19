@@ -1,7 +1,7 @@
 = Changelog
 
 
-== julienXX
+== julienXX release 0.3.1
 
 * FIXED: tags are now written in del.icio.us
 
