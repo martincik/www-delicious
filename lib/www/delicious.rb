@@ -78,8 +78,8 @@ module WWW #:nodoc:
   class Delicious
     
     NAME            = 'WWW::Delicious'
-    GEM             = 'www-delicious'
-    AUTHOR          = 'Simone Carletti <weppos@weppos.net>'
+    GEM             = 'laco-www-delicious'
+    AUTHOR          = 'Ladislav Martincik <ladislav.martincik@gmail.com>'
     
     # del.icio.us account username
     attr_reader :username

@@ -16,7 +16,7 @@ PKG_FILES   = FileList.new("{lib,test}/**/*.rb") do |files|
   files.include %w(README.rdoc CHANGELOG.rdoc LICENSE.rdoc)
   files.include %w(Rakefile setup.rb)
 end
-RUBYFORGE_PROJECT = 'www-delicious'
+RUBYFORGE_PROJECT = 'laco-www-delicious'
 
 if ENV['SNAPSHOT'].to_i == 1
   PKG_VERSION << "." << Time.now.utc.strftime("%Y%m%d%H%M%S")

@@ -1,14 +1,16 @@
 CHANGELOG.rdoc
+Gemfile
+LICENSE.rdoc
+Manifest
+README.rdoc
+Rakefile
+lib/www/delicious.rb
 lib/www/delicious/bundle.rb
 lib/www/delicious/element.rb
 lib/www/delicious/errors.rb
 lib/www/delicious/post.rb
 lib/www/delicious/tag.rb
 lib/www/delicious/version.rb
-lib/www/delicious.rb
-LICENSE.rdoc
-Rakefile
-README.rdoc
 setup.rb
 test/bundle_test.rb
 test/delicious_test.rb
@@ -43,4 +45,3 @@ test/testcases/response/tags_get_empty.xml
 test/testcases/response/tags_rename.xml
 test/testcases/response/update.delicious1.xml
 test/testcases/response/update.xml
-Manifest
