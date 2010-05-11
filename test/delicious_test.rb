@@ -22,11 +22,9 @@ class DeliciousTest < Test::Unit::TestCase
   TEST_USERNAME = 'username'
   TEST_PASSWORD = 'password'
   
-  
   def setup
     @delicious = instance
   end
-  
   
   def test_initialize_should_raise_without_account
     assert_raise(ArgumentError) { WWW::Delicious.new() }

@@ -423,9 +423,14 @@ module WWW #:nodoc:
     # 
     # === Options
     # <tt>:tag</tt>:: a tag to filter by. It can be either a <tt>WWW::Delicious::Tag</tt> or a +String+.
+    # <tt>:start</tt>:: a start is relative number you want to start from (ex. 10 and you'll not get first 9 results)
+    # <tt>:results</tt>:: a results is number of results you want
+    # <tt>:fromdt</tt>:: a fromdt is what date you want to start from
+    # <tt>:todt</tt>:: a todt is until what date you want results
+    # <tt>:meta</tt>:: a meta is adding additional meta information to results
     #
     def posts_all(options = {})
-      params = prepare_posts_params(options.clone, [:tag])
+      params = prepare_posts_params(options.clone, [:tag, :fromdt, :todt, :meta, :results, :start])
       response = request(API_PATH_POSTS_ALL, params)
       return parse_post_collection(response.body)
     end
@@ -739,14 +744,15 @@ module WWW #:nodoc:
         # are valid for this request because compare_params
         # would raise if an invalid param is supplied
         
-        params[:tag]    = prepare_param_tag(params[:tag])  if params[:tag]
-        params[:dt]     = TIME_CONVERTER.call(params[:dt]) if params[:dt]
-        params[:url]    = URI.parse(params[:url])          if params[:url]
-        params[:count]  = if value = params[:count]
+        params[:tag]     = prepare_param_tag(params[:tag])      if params[:tag]
+        params[:dt]      = TIME_CONVERTER.call(params[:dt])     if params[:dt]
+        params[:fromdt]  = TIME_CONVERTER.call(params[:fromdt]) if params[:fromdt]
+        params[:todt]    = TIME_CONVERTER.call(params[:todt])   if params[:todt]
+        params[:results] = params[:results].to_i                if params[:results]
+        params[:url]     = URI.parse(params[:url])              if params[:url]
+        params[:count]   = if value = params[:count]
           raise Error, 'Expected `count` <= 100' if value.to_i() > 100 # requirement
           value.to_i
-        else
-          15 # default value
         end
         
         return params
