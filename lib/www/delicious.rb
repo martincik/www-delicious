@@ -746,8 +746,9 @@ module WWW #:nodoc:
         
         params[:tag]     = prepare_param_tag(params[:tag])      if params[:tag]
         params[:dt]      = TIME_CONVERTER.call(params[:dt])     if params[:dt]
-        params[:fromdt]  = TIME_CONVERTER.call(params[:fromdt]) if params[:fromdt]
-        params[:todt]    = TIME_CONVERTER.call(params[:todt])   if params[:todt]
+        # 2010-05-12T16:28:22Z
+        params[:fromdt]  = params[:fromdt].strftime("%Y-%m-%dT%H:%M:%SZ") if params[:fromdt]
+        params[:todt]    = params[:todt].strftime("%Y-%m-%dT%H:%M:%SZ")   if params[:todt]
         params[:results] = params[:results].to_i                if params[:results]
         params[:url]     = URI.parse(params[:url])              if params[:url]
         params[:count]   = if value = params[:count]
