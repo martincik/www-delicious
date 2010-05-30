@@ -123,7 +123,7 @@ module WWW #:nodoc:
     API_PATH_POSTS_DELETE   = '/v1/posts/delete';
     
     # Time to wait before sending a new request, in seconds
-    SECONDS_BEFORE_NEW_REQUEST = 1
+    SECONDS_BEFORE_NEW_REQUEST = 2
     
     # Time converter converts a Time instance into the format
     # requested by Delicious API
